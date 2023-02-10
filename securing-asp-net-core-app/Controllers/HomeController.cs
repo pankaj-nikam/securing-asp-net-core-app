@@ -23,6 +23,20 @@ namespace securing_asp_net_core_app.Controllers
             return View();
         }
 
+        public IActionResult DemoPost()
+        {
+            return View();
+        }
+
+        //NOTE: 1A
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DemoPost(string data)
+        {
+            ViewData["data"] = data;
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

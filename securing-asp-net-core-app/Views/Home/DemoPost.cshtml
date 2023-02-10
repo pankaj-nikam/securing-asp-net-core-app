@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "DemoPost";
+}
+
+<h1>DemoPost</h1>
+
+@*NOTE: 2*@
+<form asp-antiforgery="true">
+    <input type="text" class="form-control-lg" name="data" id="data" required />
+    <input type="submit" class="btn btn-primary" />
+    <p>@ViewData["data"]</p>
+</form>
