@@ -31,9 +31,11 @@ namespace securing_asp_net_core_app
             {
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                //NOTE: 1A - Enable here
                 app.UseHsts();
             }
 
+            //NOTE: 1B - Enable here
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
